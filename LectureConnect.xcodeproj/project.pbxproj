@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FA04EAB1770F21D00C50C6A /* ALNetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA04EAA1770F21D00C50C6A /* ALNetworkInterface.m */; };
 		3FA847821770D0B000519AF1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA847811770D0B000519AF1 /* Cocoa.framework */; };
 		3FA8478C1770D0B000519AF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FA8478A1770D0B000519AF1 /* InfoPlist.strings */; };
 		3FA8478E1770D0B000519AF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA8478D1770D0B000519AF1 /* main.m */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FA04EA91770F21D00C50C6A /* ALNetworkInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNetworkInterface.h; sourceTree = "<group>"; };
+		3FA04EAA1770F21D00C50C6A /* ALNetworkInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNetworkInterface.m; sourceTree = "<group>"; };
 		3FA8477E1770D0B000519AF1 /* LectureConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LectureConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA847811770D0B000519AF1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3FA847841770D0B000519AF1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -76,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FA04EA81770F1EE00C50C6A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3FA04EA91770F21D00C50C6A /* ALNetworkInterface.h */,
+				3FA04EAA1770F21D00C50C6A /* ALNetworkInterface.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 		3FA847751770D0AF00519AF1 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +130,7 @@
 		3FA847871770D0B000519AF1 /* LectureConnect */ = {
 			isa = PBXGroup;
 			children = (
+				3FA04EA81770F1EE00C50C6A /* Networking */,
 				3FA847B51770D0E900519AF1 /* Views */,
 				3FA847931770D0B000519AF1 /* AppDelegate.h */,
 				3FA847941770D0B000519AF1 /* AppDelegate.m */,
@@ -268,6 +281,7 @@
 				3FA847951770D0B000519AF1 /* AppDelegate.m in Sources */,
 				3FA847B81770D0FE00519AF1 /* DrawingCanvas.m in Sources */,
 				3FA8478E1770D0B000519AF1 /* main.m in Sources */,
+				3FA04EAB1770F21D00C50C6A /* ALNetworkInterface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +494,7 @@
 				3FA847B11770D0B000519AF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FA847B21770D0B000519AF1 /* Build configuration list for PBXNativeTarget "LectureConnectTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +503,7 @@
 				3FA847B41770D0B000519AF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

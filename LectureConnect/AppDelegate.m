@@ -12,7 +12,9 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    // Connect to server
+    _server = [[ALNetworkInterface alloc] initWithURL:[NSURL URLWithString:@""]];
+    
 }
 
 @end
