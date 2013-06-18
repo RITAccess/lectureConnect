@@ -18,6 +18,7 @@
 		3FA847A21770D0B000519AF1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA847811770D0B000519AF1 /* Cocoa.framework */; };
 		3FA847AA1770D0B000519AF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FA847A81770D0B000519AF1 /* InfoPlist.strings */; };
 		3FA847AC1770D0B000519AF1 /* LectureConnectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA847AB1770D0B000519AF1 /* LectureConnectTests.m */; };
+		3FA847B81770D0FE00519AF1 /* DrawingCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA847B71770D0FE00519AF1 /* DrawingCanvas.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		3FA847A71770D0B000519AF1 /* LectureConnectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LectureConnectTests-Info.plist"; sourceTree = "<group>"; };
 		3FA847A91770D0B000519AF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3FA847AB1770D0B000519AF1 /* LectureConnectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LectureConnectTests.m; sourceTree = "<group>"; };
+		3FA847B61770D0FE00519AF1 /* DrawingCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingCanvas.h; sourceTree = "<group>"; };
+		3FA847B71770D0FE00519AF1 /* DrawingCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingCanvas.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,7 @@
 		3FA847871770D0B000519AF1 /* LectureConnect */ = {
 			isa = PBXGroup;
 			children = (
+				3FA847B51770D0E900519AF1 /* Views */,
 				3FA847931770D0B000519AF1 /* AppDelegate.h */,
 				3FA847941770D0B000519AF1 /* AppDelegate.m */,
 				3FA847961770D0B000519AF1 /* MainMenu.xib */,
@@ -152,6 +156,15 @@
 				3FA847A81770D0B000519AF1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3FA847B51770D0E900519AF1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3FA847B61770D0FE00519AF1 /* DrawingCanvas.h */,
+				3FA847B71770D0FE00519AF1 /* DrawingCanvas.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA847951770D0B000519AF1 /* AppDelegate.m in Sources */,
+				3FA847B81770D0FE00519AF1 /* DrawingCanvas.m in Sources */,
 				3FA8478E1770D0B000519AF1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
