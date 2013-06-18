@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FA847821770D0B000519AF1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA847811770D0B000519AF1 /* Cocoa.framework */; };
+		3FA8478C1770D0B000519AF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FA8478A1770D0B000519AF1 /* InfoPlist.strings */; };
+		3FA8478E1770D0B000519AF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA8478D1770D0B000519AF1 /* main.m */; };
+		3FA847921770D0B000519AF1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3FA847901770D0B000519AF1 /* Credits.rtf */; };
+		3FA847951770D0B000519AF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA847941770D0B000519AF1 /* AppDelegate.m */; };
+		3FA847981770D0B000519AF1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA847961770D0B000519AF1 /* MainMenu.xib */; };
+		3FA8479A1770D0B000519AF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FA847991770D0B000519AF1 /* Images.xcassets */; };
+		3FA847A11770D0B000519AF1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA847A01770D0B000519AF1 /* XCTest.framework */; };
+		3FA847A21770D0B000519AF1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA847811770D0B000519AF1 /* Cocoa.framework */; };
+		3FA847AA1770D0B000519AF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FA847A81770D0B000519AF1 /* InfoPlist.strings */; };
+		3FA847AC1770D0B000519AF1 /* LectureConnectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA847AB1770D0B000519AF1 /* LectureConnectTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FA847A31770D0B000519AF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FA847761770D0AF00519AF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FA8477D1770D0AF00519AF1;
+			remoteInfo = LectureConnect;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3FA8477E1770D0B000519AF1 /* LectureConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LectureConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FA847811770D0B000519AF1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3FA847841770D0B000519AF1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3FA847851770D0B000519AF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3FA847861770D0B000519AF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3FA847891770D0B000519AF1 /* LectureConnect-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LectureConnect-Info.plist"; sourceTree = "<group>"; };
+		3FA8478B1770D0B000519AF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3FA8478D1770D0B000519AF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3FA8478F1770D0B000519AF1 /* LectureConnect-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LectureConnect-Prefix.pch"; sourceTree = "<group>"; };
+		3FA847911770D0B000519AF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		3FA847931770D0B000519AF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3FA847941770D0B000519AF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3FA847971770D0B000519AF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3FA847991770D0B000519AF1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3FA8479F1770D0B000519AF1 /* LectureConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = LectureConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FA847A01770D0B000519AF1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3FA847A71770D0B000519AF1 /* LectureConnectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LectureConnectTests-Info.plist"; sourceTree = "<group>"; };
+		3FA847A91770D0B000519AF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3FA847AB1770D0B000519AF1 /* LectureConnectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LectureConnectTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FA8477B1770D0AF00519AF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FA847821770D0B000519AF1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FA8479C1770D0B000519AF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FA847A21770D0B000519AF1 /* Cocoa.framework in Frameworks */,
+				3FA847A11770D0B000519AF1 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FA847751770D0AF00519AF1 = {
+			isa = PBXGroup;
+			children = (
+				3FA847871770D0B000519AF1 /* LectureConnect */,
+				3FA847A51770D0B000519AF1 /* LectureConnectTests */,
+				3FA847801770D0B000519AF1 /* Frameworks */,
+				3FA8477F1770D0B000519AF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FA8477F1770D0B000519AF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FA8477E1770D0B000519AF1 /* LectureConnect.app */,
+				3FA8479F1770D0B000519AF1 /* LectureConnectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FA847801770D0B000519AF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FA847811770D0B000519AF1 /* Cocoa.framework */,
+				3FA847A01770D0B000519AF1 /* XCTest.framework */,
+				3FA847831770D0B000519AF1 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FA847831770D0B000519AF1 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FA847841770D0B000519AF1 /* AppKit.framework */,
+				3FA847851770D0B000519AF1 /* CoreData.framework */,
+				3FA847861770D0B000519AF1 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3FA847871770D0B000519AF1 /* LectureConnect */ = {
+			isa = PBXGroup;
+			children = (
+				3FA847931770D0B000519AF1 /* AppDelegate.h */,
+				3FA847941770D0B000519AF1 /* AppDelegate.m */,
+				3FA847961770D0B000519AF1 /* MainMenu.xib */,
+				3FA847991770D0B000519AF1 /* Images.xcassets */,
+				3FA847881770D0B000519AF1 /* Supporting Files */,
+			);
+			path = LectureConnect;
+			sourceTree = "<group>";
+		};
+		3FA847881770D0B000519AF1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3FA847891770D0B000519AF1 /* LectureConnect-Info.plist */,
+				3FA8478A1770D0B000519AF1 /* InfoPlist.strings */,
+				3FA8478D1770D0B000519AF1 /* main.m */,
+				3FA8478F1770D0B000519AF1 /* LectureConnect-Prefix.pch */,
+				3FA847901770D0B000519AF1 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3FA847A51770D0B000519AF1 /* LectureConnectTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FA847AB1770D0B000519AF1 /* LectureConnectTests.m */,
+				3FA847A61770D0B000519AF1 /* Supporting Files */,
+			);
+			path = LectureConnectTests;
+			sourceTree = "<group>";
+		};
+		3FA847A61770D0B000519AF1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3FA847A71770D0B000519AF1 /* LectureConnectTests-Info.plist */,
+				3FA847A81770D0B000519AF1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FA8477D1770D0AF00519AF1 /* LectureConnect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FA847AF1770D0B000519AF1 /* Build configuration list for PBXNativeTarget "LectureConnect" */;
+			buildPhases = (
+				3FA8477A1770D0AF00519AF1 /* Sources */,
+				3FA8477B1770D0AF00519AF1 /* Frameworks */,
+				3FA8477C1770D0AF00519AF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LectureConnect;
+			productName = LectureConnect;
+			productReference = 3FA8477E1770D0B000519AF1 /* LectureConnect.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3FA8479E1770D0B000519AF1 /* LectureConnectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FA847B21770D0B000519AF1 /* Build configuration list for PBXNativeTarget "LectureConnectTests" */;
+			buildPhases = (
+				3FA8479B1770D0B000519AF1 /* Sources */,
+				3FA8479C1770D0B000519AF1 /* Frameworks */,
+				3FA8479D1770D0B000519AF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FA847A41770D0B000519AF1 /* PBXTargetDependency */,
+			);
+			name = LectureConnectTests;
+			productName = LectureConnectTests;
+			productReference = 3FA8479F1770D0B000519AF1 /* LectureConnectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FA847761770D0AF00519AF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = RIT;
+				TargetAttributes = {
+					3FA8479E1770D0B000519AF1 = {
+						TestTargetID = 3FA8477D1770D0AF00519AF1;
+					};
+				};
+			};
+			buildConfigurationList = 3FA847791770D0AF00519AF1 /* Build configuration list for PBXProject "LectureConnect" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FA847751770D0AF00519AF1;
+			productRefGroup = 3FA8477F1770D0B000519AF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FA8477D1770D0AF00519AF1 /* LectureConnect */,
+				3FA8479E1770D0B000519AF1 /* LectureConnectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FA8477C1770D0AF00519AF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FA8478C1770D0B000519AF1 /* InfoPlist.strings in Resources */,
+				3FA8479A1770D0B000519AF1 /* Images.xcassets in Resources */,
+				3FA847921770D0B000519AF1 /* Credits.rtf in Resources */,
+				3FA847981770D0B000519AF1 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FA8479D1770D0B000519AF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FA847AA1770D0B000519AF1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FA8477A1770D0AF00519AF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FA847951770D0B000519AF1 /* AppDelegate.m in Sources */,
+				3FA8478E1770D0B000519AF1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FA8479B1770D0B000519AF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FA847AC1770D0B000519AF1 /* LectureConnectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FA847A41770D0B000519AF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FA8477D1770D0AF00519AF1 /* LectureConnect */;
+			targetProxy = 3FA847A31770D0B000519AF1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3FA8478A1770D0B000519AF1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FA8478B1770D0B000519AF1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3FA847901770D0B000519AF1 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FA847911770D0B000519AF1 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		3FA847961770D0B000519AF1 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FA847971770D0B000519AF1 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		3FA847A81770D0B000519AF1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FA847A91770D0B000519AF1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FA847AD1770D0B000519AF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3FA847AE1770D0B000519AF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3FA847B01770D0B000519AF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LectureConnect/LectureConnect-Prefix.pch";
+				INFOPLIST_FILE = "LectureConnect/LectureConnect-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3FA847B11770D0B000519AF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LectureConnect/LectureConnect-Prefix.pch";
+				INFOPLIST_FILE = "LectureConnect/LectureConnect-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3FA847B31770D0B000519AF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LectureConnect.app/Contents/MacOS/LectureConnect";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LectureConnect/LectureConnect-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LectureConnectTests/LectureConnectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3FA847B41770D0B000519AF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LectureConnect.app/Contents/MacOS/LectureConnect";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LectureConnect/LectureConnect-Prefix.pch";
+				INFOPLIST_FILE = "LectureConnectTests/LectureConnectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FA847791770D0AF00519AF1 /* Build configuration list for PBXProject "LectureConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FA847AD1770D0B000519AF1 /* Debug */,
+				3FA847AE1770D0B000519AF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FA847AF1770D0B000519AF1 /* Build configuration list for PBXNativeTarget "LectureConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FA847B01770D0B000519AF1 /* Debug */,
+				3FA847B11770D0B000519AF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3FA847B21770D0B000519AF1 /* Build configuration list for PBXNativeTarget "LectureConnectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FA847B31770D0B000519AF1 /* Debug */,
+				3FA847B41770D0B000519AF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FA847761770D0AF00519AF1 /* Project object */;
+}
