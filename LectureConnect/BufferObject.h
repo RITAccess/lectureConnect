@@ -10,6 +10,8 @@
 
 @interface BufferObject : NSObject
 
+@property (nonatomic) NSUInteger count;
+
 - (void)addChange:(CGPoint)newPoint;
 - (NSDictionary *)getData;
 

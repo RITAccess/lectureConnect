@@ -34,10 +34,17 @@
 - (NSDictionary *)getData
 {
     NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithCapacity:buffer.count];
+    int i = 0;
     for (BufferDiff *obj in buffer) {
-        [data setObject:@{@"x": @(obj.point.x), @"y": @(obj.point.y)} forKey:[NSString stringWithFormat:@"%f", [obj.timestamp timeIntervalSince1970]]];
+        [data setObject:@{@"timestamp" : @(obj.timestamp.timeIntervalSince1970), @"x": @(obj.point.x), @"y": @(obj.point.y)} forKey:[NSString stringWithFormat:@"%d", i]];
+        i++;
     }
     return data;
+}
+
+- (NSUInteger)count
+{
+    return buffer.count;
 }
 
 @end
