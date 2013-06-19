@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SocketIO.h"
+#import "BufferObject.h"
 
-@interface ALNetworkInterface : NSObject
+@interface ALNetworkInterface : NSObject <SocketIODelegate>
 
 @property (nonatomic, retain) NSURL *connectionURL;
 
 - (id)initWithURL:(NSURL *)url;
+- (void)connect;
+- (void)sendUpdate:(BufferObject *)data;
 
 @end

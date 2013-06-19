@@ -7,6 +7,8 @@
 //
 
 #import "DrawingCanvas.h"
+#import "BufferObject.h"
+#import "AppDelegate.h"
 
 @interface DrawingCanvas ()
 
@@ -14,15 +16,9 @@
 
 @end
 
-@implementation DrawingCanvas
-
-- (id)initWithFrame:(NSRect)frameRect
-{
-    self = [super initWithFrame:frameRect];
-    if (self) {
-        
-    }
-    return self;
+@implementation DrawingCanvas {
+    AppDelegate *app;
+    BufferObject *buffer;
 }
 
 - (void)viewDidMoveToWindow
@@ -35,13 +31,25 @@
 
 - (void)mouseDown:(NSEvent *)theEvent
 {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+       app = [NSApplication sharedApplication].delegate; 
+    });
+    buffer = [[BufferObject alloc] init];
     [_path moveToPoint:[theEvent locationInWindow]];
 }
 
 - (void)mouseDragged:(NSEvent *)theEvent
 {
     [_path lineToPoint:[theEvent locationInWindow]];
+    [buffer addChange:[theEvent locationInWindow]];
     [self setNeedsDisplay:YES];
+}
+
+- (void)mouseUp:(NSEvent *)theEvent
+{
+    NSLog(@"Mouse up");
+    [app.server sendUpdate:buffer];
 }
 
 - (void)drawRect:(NSRect)dirtyRect
