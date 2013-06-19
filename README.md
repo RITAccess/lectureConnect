@@ -1,0 +1,4 @@
+lectureConnect
+==============
+
+Teacher client
