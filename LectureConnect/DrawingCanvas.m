@@ -10,6 +10,8 @@
 #import "BufferObject.h"
 #import "AppDelegate.h"
 
+#define BUFFERSIZE 1
+
 @interface DrawingCanvas ()
 
 @property (nonatomic, strong) NSBezierPath *path;
@@ -42,14 +44,20 @@
 - (void)mouseDragged:(NSEvent *)theEvent
 {
     [_path lineToPoint:[theEvent locationInWindow]];
-    [buffer addChange:[theEvent locationInWindow]];
+    
+    // Check size for max packet size
+    if (buffer.count < BUFFERSIZE) {
+        [buffer addChange:[theEvent locationInWindow]];
+    } else {
+        [app.server sendUpdate:buffer];
+        buffer = [[BufferObject alloc] init];
+    }
     [self setNeedsDisplay:YES];
 }
 
 - (void)mouseUp:(NSEvent *)theEvent
 {
-    NSLog(@"Mouse up");
-    [app.server sendUpdate:buffer];
+    [app.server sendUpdate:buffer];    
 }
 
 - (void)drawRect:(NSRect)dirtyRect

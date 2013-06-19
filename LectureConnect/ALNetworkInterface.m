@@ -35,8 +35,9 @@
 
 - (void)sendUpdate:(BufferObject *)data
 {
-    NSLog(@"Sending Data");
-    [_socket sendEvent:@"update" withData:@{@"size": @(data.count), @"data" : [data getData]}];
+    if (data.count > 0) {
+        [_socket sendEvent:@"update" withData:[data getData]];
+    }
 }
 
 #pragma mark SocketIO delegate methods
