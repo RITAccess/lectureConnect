@@ -27,11 +27,11 @@
     return self;
 }
 
-- (void)connect
+- (void)connectWithURL:(NSURL *)url
 {
     _socket = [[SocketIO alloc] initWithDelegate:self];
-//    [_socket connectToHost:[_connectionURL description] onPort:9000];
-    [_socket connectToHost:@"students-imac.wireless.rit.edu" onPort:9000];
+    _connectionURL = url;
+    [_socket connectToHost:[url description] onPort:9000];
 }
 
 #pragma mark update drawing

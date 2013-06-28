@@ -23,12 +23,12 @@
 - (IBAction)connect:(id)sender
 {
     AppDelegate *app = [[NSApplication sharedApplication] delegate];
-    ALNetworkInterface *server = [app server];
-    server = [[ALNetworkInterface alloc] initWithURL:[NSURL URLWithString:_connectionURL.stringValue]];
+    ALNetworkInterface *server = app.server;
+    // server = [[ALNetworkInterface alloc] initWithURL:[NSURL URLWithString:_connectionURL.stringValue]];
     [server setLecture:_requestName.stringValue];
     [_connectWindow close];
     [_drawingWindow makeKeyAndOrderFront:_drawingWindow];
-    [server connect];
+    [server connectWithURL:[NSURL URLWithString:[_connectionURL stringValue]]];
 }
 
 #pragma mark System

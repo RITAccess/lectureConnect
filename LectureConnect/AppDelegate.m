@@ -7,12 +7,22 @@
 //
 
 #import "AppDelegate.h"
+#import "ALNetworkInterface.h"
 
 @implementation AppDelegate
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        _server = [[ALNetworkInterface alloc] init];
+    }
+    return self;
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-
+    
 }
 
 @end
