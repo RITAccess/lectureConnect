@@ -30,21 +30,41 @@
 - (void)connect
 {
     _socket = [[SocketIO alloc] initWithDelegate:self];
-    [_socket connectToHost:[_connectionURL description] onPort:9000];
+//    [_socket connectToHost:[_connectionURL description] onPort:9000];
+    [_socket connectToHost:@"students-imac.wireless.rit.edu" onPort:9000];
 }
 
-- (void)sendUpdate:(BufferObject *)data
+#pragma mark update drawing
+
+- (void)sendMoveToPoint:(CGPoint)point
 {
-    if (data.count > 0) {
-        [_socket sendEvent:@"update" withData:[data getData]];
-    }
+    [_socket sendEvent:@"update" withData:@{
+                                            @"action" : @"moveTo",
+                                            @"x" : [@(point.x) stringValue],
+                                            @"y" : [@(point.y) stringValue]
+                                            }];
+}
+
+- (void)sendLineToPoint:(CGPoint)point
+{
+    [_socket sendEvent:@"update" withData:@{
+                                            @"action" : @"lineTo",
+                                            @"x" : [@(point.x) stringValue],
+                                            @"y" : [@(point.y) stringValue]
+                                            }];
 }
 
 #pragma mark SocketIO delegate methods
 
 - (void) socketIODidConnect:(SocketIO *)socket
 {
-    [_socket sendEvent:@"connect-teacher" withData:@{@"name":@"Math Class"}];
+    NSLog(@"Did connect");
+    [_socket sendEvent:@"connect-teacher" withData:@{@"name":_lecture}];
+    if ([_delegate respondsToSelector:@selector(screenSize)]) {
+        CGSize size = [_delegate screenSize];
+        [_socket sendEvent:@"set-cord" withData:@{@"width" : @(size.width), @"height" : @(size.height)}];
+    }
+
 }
 
 - (void) socketIODidDisconnect:(SocketIO *)socket disconnectedWithError:(NSError *)error
@@ -68,6 +88,10 @@
     if ([packet.name isEqualToString:@"get-name"]) {
         [_socket sendEvent:@"set-name" withData:[[NSHost currentHost] localizedName]];
     }
+    // Get size
+    if ([packet.name isEqualToString:@"get-size"]) {
+        
+    }
 }
 
 - (void) socketIO:(SocketIO *)socket didSendMessage:(SocketIOPacket *)packet
@@ -77,7 +101,7 @@
 
 - (void) socketIO:(SocketIO *)socket onError:(NSError *)error
 {
-    
+    NSLog(@"Errored: %@", error.description);
 }
 
 @end

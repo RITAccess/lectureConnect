@@ -13,6 +13,6 @@
 
 @property (assign) IBOutlet NSWindow *window;
 
-@property (nonatomic, retain) ALNetworkInterface *server;
+@property (nonatomic, strong) ALNetworkInterface *server;
 
 @end

@@ -7,8 +7,7 @@
 //
 
 #import "DrawingCanvas.h"
-#import "BufferObject.h"
-#import "AppDelegate.h"
+#import "ALNetworkInterface.h"
 
 #define BUFFERSIZE 1
 
@@ -18,10 +17,13 @@
 
 @end
 
-@implementation DrawingCanvas {
-    AppDelegate *app;
-    BufferObject *buffer;
-}
+@interface NSBezierPath ()
+
+@property NSColor *color;
+
+@end
+
+@implementation DrawingCanvas
 
 - (void)viewDidMoveToWindow
 {
@@ -31,33 +33,32 @@
 
 - (BOOL)acceptsFirstResponder {return YES;}
 
+#pragma mark NetworkDataSource
+
+- (CGSize)screenSize
+{
+    return self.frame.size;
+}
+
+#pragma mark Drawing
+
 - (void)mouseDown:(NSEvent *)theEvent
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-       app = [NSApplication sharedApplication].delegate; 
-    });
-    buffer = [[BufferObject alloc] init];
+    _app = [NSApplication sharedApplication].delegate;
+    [_app.server sendMoveToPoint:theEvent.locationInWindow];
     [_path moveToPoint:[theEvent locationInWindow]];
 }
 
 - (void)mouseDragged:(NSEvent *)theEvent
 {
+    [_app.server sendLineToPoint:theEvent.locationInWindow];
     [_path lineToPoint:[theEvent locationInWindow]];
-    
-    // Check size for max packet size
-    if (buffer.count < BUFFERSIZE) {
-        [buffer addChange:[theEvent locationInWindow]];
-    } else {
-        [app.server sendUpdate:buffer];
-        buffer = [[BufferObject alloc] init];
-    }
     [self setNeedsDisplay:YES];
 }
 
 - (void)mouseUp:(NSEvent *)theEvent
 {
-    [app.server sendUpdate:buffer];    
+      
 }
 
 - (void)drawRect:(NSRect)dirtyRect

@@ -440,21 +440,9 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="LectureConnect" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="1280" height="720"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
-            <value key="minSize" type="size" width="1280" height="720"/>
-            <value key="maxSize" type="size" width="1280" height="720"/>
-            <view key="contentView" id="372" customClass="DrawingCanvas">
-                <rect key="frame" x="0.0" y="0.0" width="1280" height="720"/>
-                <autoresizingMask key="autoresizingMask"/>
-            </view>
-        </window>
         <customObject id="494" customClass="AppDelegate">
             <connections>
-                <outlet property="window" destination="371" id="532"/>
+                <outlet property="window" destination="wCs-kj-zg0" id="Suv-MG-kUu"/>
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager">
@@ -466,16 +454,85 @@
                 <action selector="orderFrontFontPanel:" destination="389" id="424"/>
             </connections>
         </customObject>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="bYt-ry-fWS">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="283" y="305" width="1024" height="768"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <view key="contentView" id="uUY-NN-Cr2">
+                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+        </window>
+        <customObject id="pNO-al-AMV" customClass="AppController">
+            <connections>
+                <action selector="connect:" destination="6k7-Zm-yX6" id="C1h-rE-2Ki"/>
+                <outlet property="canvas" destination="uUY-NN-Cr2" id="2Aa-o3-Ezx"/>
+                <outlet property="connectWindow" destination="wCs-kj-zg0" id="RRz-u6-uc6"/>
+                <outlet property="connectionURL" destination="aKe-H0-yBP" id="4p2-At-j1q"/>
+                <outlet property="drawingWindow" destination="bYt-ry-fWS" id="rUR-de-jWZ"/>
+                <outlet property="requestName" destination="z2x-O7-muP" id="Yoi-87-7cU"/>
+            </connections>
+        </customObject>
+        <window title="Connect To Server" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" showsToolbarButton="NO" animationBehavior="default" id="wCs-kj-zg0">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="1736" y="1022" width="480" height="96"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <view key="contentView" id="mGX-q8-lMf">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="96"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QtI-bt-qAh">
+                        <rect key="frame" x="20" y="54" width="225" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="students-imac.wireless.rit.edu" drawsBackground="YES" id="aKe-H0-yBP">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z2x-O7-muP">
+                        <rect key="frame" x="20" y="22" width="225" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="Math Class" drawsBackground="YES" id="UEC-1x-V8j">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6k7-Zm-yX6">
+                        <rect key="frame" x="275" y="22" width="185" height="54"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="square" title="Start Streaming" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gxJ-wM-XV3">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="pNO-al-AMV" id="U3l-qY-XQK"/>
+            </connections>
+        </window>
     </objects>
     <classes>
+        <class className="AppController" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AppController.h"/>
+            <relationships>
+                <relationship kind="action" name="connect:"/>
+                <relationship kind="action" name="quitApp:"/>
+                <relationship kind="outlet" name="canvas" candidateClass="NSView"/>
+                <relationship kind="outlet" name="connectWindow" candidateClass="NSWindow"/>
+                <relationship kind="outlet" name="connectionURL" candidateClass="NSTextField"/>
+                <relationship kind="outlet" name="requestName" candidateClass="NSTextField"/>
+            </relationships>
+        </class>
         <class className="AppDelegate" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AppDelegate.h"/>
             <relationships>
                 <relationship kind="outlet" name="window" candidateClass="NSWindow"/>
             </relationships>
-        </class>
-        <class className="DrawingCanvas" superclassName="NSView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrawingCanvas.h"/>
         </class>
         <class className="NSDocument">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSDocument.h"/>
