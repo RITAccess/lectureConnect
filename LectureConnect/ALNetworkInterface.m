@@ -101,7 +101,7 @@
 
 - (void) socketIO:(SocketIO *)socket onError:(NSError *)error
 {
-    NSLog(@"Errored: %@", error.description);
+    NSLog(@"Error: %@", error.description);
 }
 
 @end
