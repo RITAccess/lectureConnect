@@ -69,4 +69,11 @@
     [_path stroke];
 }
 
+- (NSImage *)getCurrentImage
+{
+    NSBitmapImageRep *image;
+    [self cacheDisplayInRect:self.frame toBitmapImageRep:image];
+    return [[NSImage alloc] initWithCGImage:[image CGImage] size:self.frame.size];
+}
+
 @end
