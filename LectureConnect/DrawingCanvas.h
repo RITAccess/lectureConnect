@@ -14,4 +14,6 @@
 
 @property (nonatomic, strong) AppDelegate *app;
 
+- (NSImage *)getCurrentImage;
+
 @end
