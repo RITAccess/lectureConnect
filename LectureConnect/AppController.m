@@ -29,7 +29,7 @@
 //    [_drawingWindow makeKeyAndOrderFront:_drawingWindow];
     [server connectWithURL:[NSURL URLWithString:[_connectionURL stringValue]]];
     
-    NSImage *image = [NSImage imageNamed:@"IMG_1705.JPG"];
+    NSImage *image = [NSImage imageNamed:@"diff.jpg"];
     
     [server sendImage:image];
     

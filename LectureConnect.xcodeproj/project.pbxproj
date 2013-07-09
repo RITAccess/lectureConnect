@@ -31,6 +31,8 @@
 		3FA847AA1770D0B000519AF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FA847A81770D0B000519AF1 /* InfoPlist.strings */; };
 		3FA847AC1770D0B000519AF1 /* LectureConnectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA847AB1770D0B000519AF1 /* LectureConnectTests.m */; };
 		3FA847B81770D0FE00519AF1 /* DrawingCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA847B71770D0FE00519AF1 /* DrawingCanvas.m */; };
+		4C67DBA31784AC5B006D64C8 /* IMG_1705.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4C67DBA21784AC5B006D64C8 /* IMG_1705.JPG */; };
+		4C67DBA51784B380006D64C8 /* diff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C67DBA41784B380006D64C8 /* diff.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		3FA847AB1770D0B000519AF1 /* LectureConnectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LectureConnectTests.m; sourceTree = "<group>"; };
 		3FA847B61770D0FE00519AF1 /* DrawingCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingCanvas.h; sourceTree = "<group>"; };
 		3FA847B71770D0FE00519AF1 /* DrawingCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingCanvas.m; sourceTree = "<group>"; };
+		4C67DBA21784AC5B006D64C8 /* IMG_1705.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1705.JPG; sourceTree = "<group>"; };
+		4C67DBA41784B380006D64C8 /* diff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = diff.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +238,8 @@
 		3FA847881770D0B000519AF1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4C67DBA21784AC5B006D64C8 /* IMG_1705.JPG */,
+				4C67DBA41784B380006D64C8 /* diff.jpg */,
 				3FA847891770D0B000519AF1 /* LectureConnect-Info.plist */,
 				3FA8478A1770D0B000519AF1 /* InfoPlist.strings */,
 				3FA8478D1770D0B000519AF1 /* main.m */,
@@ -346,8 +352,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C67DBA31784AC5B006D64C8 /* IMG_1705.JPG in Resources */,
 				3FA8478C1770D0B000519AF1 /* InfoPlist.strings in Resources */,
 				3FA8479A1770D0B000519AF1 /* Images.xcassets in Resources */,
+				4C67DBA51784B380006D64C8 /* diff.jpg in Resources */,
 				3F916FF5177375FA000F0967 /* DrawingViewController.xib in Resources */,
 				3FA847921770D0B000519AF1 /* Credits.rtf in Resources */,
 				3FA847981770D0B000519AF1 /* MainMenu.xib in Resources */,
