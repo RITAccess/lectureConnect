@@ -54,6 +54,11 @@
                                             }];
 }
 
+- (void)sendImage:(NSImage *)image
+{
+    [_socket sendEvent:@"image" withData:[[image TIFFRepresentationUsingCompression:NSTIFFCompressionJPEG factor:3.0] base64Encoding]];
+}
+
 #pragma mark SocketIO delegate methods
 
 - (void) socketIODidConnect:(SocketIO *)socket

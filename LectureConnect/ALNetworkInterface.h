@@ -28,4 +28,6 @@
 - (void)sendMoveToPoint:(CGPoint)point;
 - (void)sendLineToPoint:(CGPoint)point;
 
+- (void)sendImage:(NSImage *)image;
+
 @end
