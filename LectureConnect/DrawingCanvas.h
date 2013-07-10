@@ -10,7 +10,7 @@
 #import "ALNetworkInterface.h"
 #import "AppDelegate.h"
 
-@interface DrawingCanvas : NSView <NetworkDataSource>
+@interface DrawingCanvas : NSView
 
 @property (nonatomic, strong) AppDelegate *app;
 

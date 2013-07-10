@@ -19,7 +19,10 @@
     drawController = [[DrawingViewController alloc] initWithNibName:@"DrawingViewController" bundle:nil];
     [_canvas addSubview:drawController.view];
     [_clearButton setTarget:drawController];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
     [_clearButton setAction:@selector(clearScreen:)];
+#pragma clang diagnostic pop
 }
 
 #pragma mark Stream Setup

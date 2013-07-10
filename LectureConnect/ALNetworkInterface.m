@@ -9,6 +9,7 @@
 #import "ALNetworkInterface.h"
 #import "SocketIOJSONSerialization.h"
 #import "SocketIOPacket.h"
+#import "NSData+SRB64Additions.h"
 
 @interface ALNetworkInterface ()
 
@@ -64,7 +65,7 @@
 
 - (void)sendImage:(NSImage *)image
 {
-    [_socket sendEvent:@"image" withData:[[image TIFFRepresentationUsingCompression:NSTIFFCompressionJPEG factor:3.0] base64Encoding]];
+    [_socket sendEvent:@"image" withData:[[image TIFFRepresentationUsingCompression:NSTIFFCompressionJPEG factor:3.0] SR_stringByBase64Encoding]];
 }
 
 - (void)clearRemote
