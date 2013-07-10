@@ -18,6 +18,8 @@
 {
     drawController = [[DrawingViewController alloc] initWithNibName:@"DrawingViewController" bundle:nil];
     [_canvas addSubview:drawController.view];
+    [_clearButton setTarget:drawController];
+    [_clearButton setAction:@selector(clearScreen:)];
 }
 
 #pragma mark Stream Setup

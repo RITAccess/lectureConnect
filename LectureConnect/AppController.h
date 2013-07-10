@@ -10,7 +10,7 @@
 #import "DrawingViewController.h"
 
 @interface AppController : NSObject <NSWindowDelegate>
-
+@property (weak) IBOutlet NSButton *clearButton;
 @property (nonatomic, strong) IBOutlet NSView *canvas;
 @property (weak) IBOutlet NSTextField *connectionURL;
 @property (weak) IBOutlet NSTextField *requestName;

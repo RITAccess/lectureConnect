@@ -67,6 +67,11 @@
     [_socket sendEvent:@"image" withData:[[image TIFFRepresentationUsingCompression:NSTIFFCompressionJPEG factor:3.0] base64Encoding]];
 }
 
+- (void)clearRemote
+{
+    [_socket sendEvent:@"clear-screen" withData:nil];
+}
+
 #pragma mark SocketIO delegate methods
 
 - (void) socketIODidConnect:(SocketIO *)socket

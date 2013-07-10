@@ -30,4 +30,6 @@
 
 - (void)sendImage:(NSImage *)image;
 
+- (void)clearRemote;
+
 @end

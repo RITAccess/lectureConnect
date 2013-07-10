@@ -468,6 +468,7 @@
             <connections>
                 <action selector="connect:" destination="6k7-Zm-yX6" id="C1h-rE-2Ki"/>
                 <outlet property="canvas" destination="uUY-NN-Cr2" id="2Aa-o3-Ezx"/>
+                <outlet property="clearButton" destination="ev9-Wh-6iu" id="h8x-HV-IUX"/>
                 <outlet property="connectWindow" destination="wCs-kj-zg0" id="RRz-u6-uc6"/>
                 <outlet property="connectionURL" destination="aKe-H0-yBP" id="4p2-At-j1q"/>
                 <outlet property="drawingWindow" destination="bYt-ry-fWS" id="rUR-de-jWZ"/>

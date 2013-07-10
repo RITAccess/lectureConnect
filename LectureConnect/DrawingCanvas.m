@@ -17,12 +17,6 @@
 
 @end
 
-@interface NSBezierPath ()
-
-@property NSColor *color;
-
-@end
-
 @implementation DrawingCanvas
 
 - (void)viewDidMoveToWindow
@@ -67,6 +61,12 @@
     NSBitmapImageRep *image;
     [self cacheDisplayInRect:self.frame toBitmapImageRep:image];
     return [[NSImage alloc] initWithCGImage:[image CGImage] size:self.frame.size];
+}
+
+- (void)clearCanvas
+{
+    [_path removeAllPoints];
+    [self setNeedsDisplay:YES];
 }
 
 @end

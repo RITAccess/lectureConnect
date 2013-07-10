@@ -31,5 +31,14 @@
     return self.view.frame.size;
 }
 
+#pragma mark Control
+
+- (IBAction)clearScreen:(id)sender
+{
+    NSLog(@"Clear Screen?");
+    [self.canvas clearCanvas];
+    [_server clearRemote];
+}
+
 
 @end
