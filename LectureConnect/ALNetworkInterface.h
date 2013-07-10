@@ -23,7 +23,7 @@
 @property (nonatomic, retain) id<NetworkDataSource> delegate;
 
 - (id)initWithURL:(NSURL *)url;
-- (void)connectWithURL:(NSURL *)url;
+- (void)connectWithURL:(NSURL *)url completetion:(void(^)(BOOL completed))done;
 
 - (void)sendMoveToPoint:(CGPoint)point;
 - (void)sendLineToPoint:(CGPoint)point;

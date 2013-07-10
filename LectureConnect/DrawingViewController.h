@@ -8,8 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import "DrawingCanvas.h"
+#import "ALNetworkInterface.h"
 
-@interface DrawingViewController : NSViewController
+@interface DrawingViewController : NSViewController <NetworkDataSource>
 @property (strong) IBOutlet DrawingCanvas *canvas;
+
+- (void)connectedToServer:(ALNetworkInterface *)server;
 
 @end

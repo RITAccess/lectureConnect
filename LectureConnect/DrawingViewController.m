@@ -13,15 +13,23 @@
 
 @end
 
-@implementation DrawingViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    
-    }
-    return self;
+@implementation DrawingViewController {
+    ALNetworkInterface *_server;
 }
+
+- (void)connectedToServer:(ALNetworkInterface *)server
+{
+    _server = server;
+    _server.delegate = self;
+
+}
+
+#pragma mark NetworkDataSource
+
+- (CGSize)screenSize
+{
+    return self.view.frame.size;
+}
+
 
 @end

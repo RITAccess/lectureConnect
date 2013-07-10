@@ -27,11 +27,19 @@
     return self;
 }
 
-- (void)connectWithURL:(NSURL *)url
+- (void)connectWithURL:(NSURL *)url completetion:(void(^)(BOOL completed))done
 {
     _socket = [[SocketIO alloc] initWithDelegate:self];
     _connectionURL = url;
     [_socket connectToHost:[url description] onPort:9000];
+    NSOperationQueue *wait = [NSOperationQueue new];
+    [wait addOperationWithBlock:^{
+        while (_socket.isConnecting)
+            ;
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            done(_socket.isConnected);
+        }];
+    }];
 }
 
 #pragma mark update drawing

@@ -10,10 +10,13 @@
 #import "ALNetworkInterface.h"
 
 @implementation AppController
+{
+    DrawingViewController *drawController;
+}
 
 - (void)awakeFromNib
 {
-    DrawingViewController *drawController = [[DrawingViewController alloc] initWithNibName:@"DrawingViewController" bundle:nil];
+    drawController = [[DrawingViewController alloc] initWithNibName:@"DrawingViewController" bundle:nil];
     [_canvas addSubview:drawController.view];
 }
 
@@ -23,11 +26,16 @@
 {
     AppDelegate *app = [[NSApplication sharedApplication] delegate];
     ALNetworkInterface *server = app.server;
-    [server connectWithURL:[NSURL URLWithString:_connectionURL.stringValue]];
     [server setLecture:_requestName.stringValue];
-    [_connectWindow close];
-    [_drawingWindow makeKeyAndOrderFront:_drawingWindow];
-    [server connectWithURL:[NSURL URLWithString:[_connectionURL stringValue]]];
+    [server connectWithURL:[NSURL URLWithString:_connectionURL.stringValue] completetion:^(BOOL completed) {
+        if (completed) {
+            [_connectWindow close];
+            [_drawingWindow makeKeyAndOrderFront:_drawingWindow];
+            [drawController connectedToServer:server];
+        } else {
+            NSLog(@"Failed to connect");
+        }
+    }];
 }
 
 #pragma mark System

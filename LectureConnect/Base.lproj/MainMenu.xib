@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4457.6" systemVersion="12E55" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4471.1" systemVersion="13A510d" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1080" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4457.6"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4471.1"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -458,7 +458,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="283" y="305" width="1024" height="768"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
             <view key="contentView" id="uUY-NN-Cr2">
                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -478,7 +478,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="1736" y="1022" width="480" height="96"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
             <view key="contentView" id="mGX-q8-lMf">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="96"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -515,50 +515,25 @@
                 <outlet property="delegate" destination="pNO-al-AMV" id="U3l-qY-XQK"/>
             </connections>
         </window>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="6b4-LL-DwV" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="167" y="107" width="90" height="428"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <view key="contentView" id="0L8-Ww-Yxb">
+                <rect key="frame" x="0.0" y="0.0" width="90" height="428"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ev9-Wh-6iu">
+                        <rect key="frame" x="13" y="381" width="64" height="37"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="bevel" title="Clear" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4Fk-vt-iwL">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system" size="10"/>
+                        </buttonCell>
+                    </button>
+                </subviews>
+            </view>
+        </window>
     </objects>
-    <classes>
-        <class className="AppController" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AppController.h"/>
-            <relationships>
-                <relationship kind="action" name="connect:"/>
-                <relationship kind="action" name="quitApp:"/>
-                <relationship kind="outlet" name="canvas" candidateClass="NSView"/>
-                <relationship kind="outlet" name="connectWindow" candidateClass="NSWindow"/>
-                <relationship kind="outlet" name="connectionURL" candidateClass="NSTextField"/>
-                <relationship kind="outlet" name="requestName" candidateClass="NSTextField"/>
-            </relationships>
-        </class>
-        <class className="AppDelegate" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AppDelegate.h"/>
-            <relationships>
-                <relationship kind="outlet" name="window" candidateClass="NSWindow"/>
-            </relationships>
-        </class>
-        <class className="NSDocument">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSDocument.h"/>
-            <relationships>
-                <relationship kind="action" name="browseDocumentVersions:"/>
-                <relationship kind="action" name="duplicateDocument:"/>
-                <relationship kind="action" name="lockDocument:"/>
-                <relationship kind="action" name="moveDocument:"/>
-                <relationship kind="action" name="moveDocumentToUbiquityContainer:"/>
-                <relationship kind="action" name="printDocument:"/>
-                <relationship kind="action" name="renameDocument:"/>
-                <relationship kind="action" name="revertDocumentToSaved:"/>
-                <relationship kind="action" name="runPageLayout:"/>
-                <relationship kind="action" name="saveDocument:"/>
-                <relationship kind="action" name="saveDocumentAs:"/>
-                <relationship kind="action" name="saveDocumentTo:"/>
-                <relationship kind="action" name="saveDocumentToPDF:"/>
-                <relationship kind="action" name="unlockDocument:"/>
-            </relationships>
-        </class>
-        <class className="NSTextView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSTextView.h"/>
-            <relationships>
-                <relationship kind="action" name="orderFrontSharingServicePicker:"/>
-                <relationship kind="action" name="toggleQuickLookPreviewPanel:"/>
-            </relationships>
-        </class>
-    </classes>
 </document>

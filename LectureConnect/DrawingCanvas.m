@@ -33,13 +33,6 @@
 
 - (BOOL)acceptsFirstResponder {return YES;}
 
-#pragma mark NetworkDataSource
-
-- (CGSize)screenSize
-{
-    return self.frame.size;
-}
-
 #pragma mark Drawing
 
 - (void)mouseDown:(NSEvent *)theEvent
