@@ -23,16 +23,11 @@
 {
     AppDelegate *app = [[NSApplication sharedApplication] delegate];
     ALNetworkInterface *server = app.server;
-    // server = [[ALNetworkInterface alloc] initWithURL:[NSURL URLWithString:_connectionURL.stringValue]];
+    [server connectWithURL:[NSURL URLWithString:_connectionURL.stringValue]];
     [server setLecture:_requestName.stringValue];
-//    [_connectWindow close];
-//    [_drawingWindow makeKeyAndOrderFront:_drawingWindow];
+    [_connectWindow close];
+    [_drawingWindow makeKeyAndOrderFront:_drawingWindow];
     [server connectWithURL:[NSURL URLWithString:[_connectionURL stringValue]]];
-    
-    NSImage *image = [NSImage imageNamed:@"diff.jpg"];
-    
-    [server sendImage:image];
-    
 }
 
 #pragma mark System
